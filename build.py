@@ -19,7 +19,7 @@ def load_config(path):
     return config
 
 def parse_date(s):
-    return datetime.date.fromisoformat(s.strip())
+    return datetime.date.fromisoformat(s.strip().split("#")[0].strip())
 
 # ── data ──────────────────────────────────────────────────────────────────────
 

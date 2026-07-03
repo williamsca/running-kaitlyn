@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charlottesville 10 Miler Training</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #FAF8F4;
+  color: #2C3E2D;
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* ── header ── */
+.site-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #C2CABB;
+  padding-bottom: 1.5rem;
+}
+.header-text h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2C3E2D;
+  line-height: 1.2;
+}
+.race-meta {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #5B7E8C;
+}
+.countdown {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #A3533A;
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+.countdown-label {
+  font-size: 0.75rem;
+  color: #5B7E8C;
+  text-align: right;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.header-art {
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ── section titles ── */
+.section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5B7E8C;
+  margin-bottom: 1rem;
+}
+
+/* ── run cards ── */
+.this-week { margin-bottom: 3rem; }
+
+.run-card {
+  border-left: 3px solid #C2CABB;
+  padding: 0.75rem 0 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+.run-card.today {
+  border-left-color: #5B7E8C;
+}
+.run-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+.run-day {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.run-duration {
+  font-size: 0.85rem;
+  color: #5B7E8C;
+}
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+}
+.label-easy      { background: #E8EFE6; color: #3A6640; }
+.label-tempo     { background: #E8F0F3; color: #2F5F6E; }
+.label-intervals { background: #F3EBE6; color: #7A3B24; }
+.label-long      { background: #EDE8E3; color: #5C4A38; }
+.label-race      { background: #A3533A; color: #FAF8F4; }
+
+.detail {
+  font-size: 0.95rem;
+  color: #3E5040;
+}
+.detail-blocks {
+  list-style: none;
+  font-size: 0.95rem;
+  color: #3E5040;
+  padding-left: 0;
+}
+.detail-blocks li {
+  padding: 0.25rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.detail-blocks li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #C2CABB;
+  font-size: 0.8rem;
+  top: 0.35rem;
+}
+
+/* ── timeline ── */
+.timeline-section { margin-bottom: 3rem; }
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.week-node {
+  border: 1px solid #C2CABB;
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  min-width: 80px;
+  font-size: 0.78rem;
+}
+.week-node.past {
+  opacity: 0.4;
+}
+.week-node.current {
+  border-color: #5B7E8C;
+  border-width: 2px;
+  background: #F0F5F6;
+}
+.week-node.finish {
+  border-style: dashed;
+  border-color: #A3533A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.week-number {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #2C3E2D;
+}
+.week-dates {
+  color: #7A8F7D;
+  font-size: 0.7rem;
+}
+.week-labels {
+  color: #5B7E8C;
+  font-size: 0.72rem;
+  margin-top: 0.15rem;
+}
+.week-duration {
+  color: #A3533A;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.finish-img {
+  width: 52px;
+  height: auto;
+}
+
+/* ── footer ── */
+.site-footer {
+  border-top: 1px solid #C2CABB;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-art {
+  width: 48px;
+  opacity: 0.6;
+}
+.footer-text {
+  font-size: 0.78rem;
+  color: #7A8F7D;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-text">
+    <h1>Kaitlyn's<br>Training Plan</h1>
+    <p class="race-meta">Charlottesville 10 Miler &middot; October 3, 2026</p>
+  </div>
+  <div>
+    <div class="countdown">92</div>
+    <div class='countdown-label'>days to race</div>
+  </div>
+  <img src="../assets/runner.png" alt="" class="header-art" aria-hidden="true">
+</header>
+
+<section class="this-week"><p class="section-title">This week — Week 1</p>
+    <div class="run-card">
+      <div class="run-header">
+        <span class="run-day">Tuesday, Jun 30</span>
+        <span class="run-duration">35 min</span>
+        <span class="label label-easy">Easy</span>
+      </div>
+      <p class="detail">35 min @ easy conversational pace (10:30–11:00/mi)</p>
+    </div>
+    <div class="run-card">
+      <div class="run-header">
+        <span class="run-day">Thursday, Jul 2</span>
+        <span class="run-duration">40 min</span>
+        <span class="label label-tempo">Tempo</span>
+      </div>
+      <ol class="detail-blocks"><li>10 min warmup @ easy</li><li>20 min @ tempo (9:00/mi)</li><li>10 min cooldown</li></ol>
+    </div>
+    <div class="run-card">
+      <div class="run-header">
+        <span class="run-day">Saturday, Jul 4</span>
+        <span class="run-duration">55 min</span>
+        <span class="label label-long">Long</span>
+      </div>
+      <p class="detail">55 min @ easy pace; focus on time on feet</p>
+    </div></section>
+<section class="timeline-section"><p class="section-title">Training timeline</p><div class="timeline">
+      <div class="week-node current">
+        <div class="week-number">Wk 1</div>
+        <div class="week-dates">Jun 29–5</div>
+        <div class="week-labels">Easy, Tempo, Long</div>
+        <div class='week-duration'>130 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 2</div>
+        <div class="week-dates">Jul 6–12</div>
+        <div class="week-labels">Easy, Intervals, Long</div>
+        <div class='week-duration'>145 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 3</div>
+        <div class="week-dates">Jul 13–19</div>
+        <div class="week-labels">Easy, Tempo, Long</div>
+        <div class='week-duration'>145 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 4</div>
+        <div class="week-dates">Jul 20–26</div>
+        <div class="week-labels">Easy, Long</div>
+        <div class='week-duration'>115 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 5</div>
+        <div class="week-dates">Jul 27–2</div>
+        <div class="week-labels">Easy, Intervals, Long</div>
+        <div class='week-duration'>155 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 6</div>
+        <div class="week-dates">Aug 3–9</div>
+        <div class="week-labels">Easy, Tempo, Long</div>
+        <div class='week-duration'>165 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 7</div>
+        <div class="week-dates">Aug 10–16</div>
+        <div class="week-labels">Easy, Intervals, Long</div>
+        <div class='week-duration'>165 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 8</div>
+        <div class="week-dates">Aug 17–23</div>
+        <div class="week-labels">Easy, Tempo, Long</div>
+        <div class='week-duration'>125 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 9</div>
+        <div class="week-dates">Aug 24–30</div>
+        <div class="week-labels">Easy</div>
+        <div class='week-duration'>75 min</div>
+      </div>
+      <div class="week-node future">
+        <div class="week-number">Wk 10</div>
+        <div class="week-dates">Aug 31–6</div>
+        <div class="week-labels">Race</div>
+        
+      </div>
+      <div class="week-node finish">
+        <img src="../assets/finish.png" alt="Finish line" class="finish-img">
+        <div class="week-labels">Race Day</div>
+      </div></div></section>
+
+<footer class="site-footer">
+  <img src="../assets/bagels.png" alt="" class="footer-art" aria-hidden="true">
+  <p class="footer-text">Updated every Monday &middot; July 3, 2026</p>
+</footer>
+
+</body>
+</html>
