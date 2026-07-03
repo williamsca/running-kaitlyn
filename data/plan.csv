@@ -1,0 +1,29 @@
+week,day,duration_min,label,detail
+1,Tuesday,35,Easy,35 min @ easy conversational pace (10:30–11:00/mi)
+1,Thursday,40,Tempo,10 min warmup @ easy | 20 min @ tempo (9:00/mi) | 10 min cooldown
+1,Saturday,55,Long,55 min @ easy pace; focus on time on feet
+2,Tuesday,35,Easy,35 min @ easy conversational pace
+2,Thursday,45,Intervals,10 min warmup | 4×(3 min @ hard / 90 sec jog) | 10 min cooldown
+2,Saturday,65,Long,65 min @ easy pace; practice fueling at 30 min mark
+3,Tuesday,35,Easy,35 min @ easy pace with 4×30 sec strides at end
+3,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (8:55/mi) | 10 min cooldown
+3,Saturday,70,Long,70 min easy; last 15 min @ moderate effort
+4,Tuesday,30,Easy,30 min easy — recovery week
+4,Thursday,35,Easy,35 min easy with 4×30 sec strides
+4,Saturday,50,Long,50 min easy — recovery week
+5,Tuesday,35,Easy,35 min @ easy pace
+5,Thursday,45,Intervals,10 min warmup | 5×(3 min @ hard / 90 sec jog) | 10 min cooldown
+5,Saturday,75,Long,75 min easy; fueling every 30 min
+6,Tuesday,40,Easy,40 min easy with last 10 min @ moderate
+6,Thursday,45,Tempo,10 min warmup | 25 min @ tempo (8:50/mi) | 10 min cooldown
+6,Saturday,80,Long,80 min easy; simulate race morning routine
+7,Tuesday,35,Easy,35 min easy
+7,Thursday,45,Intervals,10 min warmup | 6×(2 min @ hard / 60 sec jog) | 10 min cooldown
+7,Saturday,85,Long,85 min easy; longest run of the plan
+8,Tuesday,30,Easy,30 min easy — taper begins
+8,Thursday,35,Tempo,10 min warmup | 15 min @ tempo | 10 min cooldown
+8,Saturday,60,Long,60 min easy — taper week
+9,Tuesday,30,Easy,30 min easy
+9,Thursday,25,Easy,25 min easy with 4×30 sec race-pace strides
+9,Saturday,20,Easy,20 min shakeout — stay loose
+10,Saturday,0,Race,Race day — Charlottesville 10 Miler! You've got this.
