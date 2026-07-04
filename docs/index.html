@@ -143,9 +143,20 @@ body {
   padding: 0.5rem 0.65rem;
   min-width: 80px;
   font-size: 0.78rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
 }
 .week-node.past {
   opacity: 0.4;
+}
+.week-node:hover {
+  border-color: #5B7E8C;
+  background: #F7FAFA;
+}
+.week-node.selected {
+  border-color: #5B7E8C;
+  border-width: 2px;
+  background: #F0F5F6;
 }
 .week-node.current {
   border-color: #5B7E8C;
@@ -174,6 +185,20 @@ body {
   color: #A3533A;
   font-size: 0.7rem;
   font-weight: 600;
+}
+
+/* ── back link ── */
+.back-link {
+  font-size: 0.75rem;
+  color: #5B7E8C;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.back-link:hover {
+  text-decoration: underline;
 }
 
 /* ── footer ── */
@@ -218,107 +243,107 @@ body {
       <p class="detail">35 min easy — cutback week</p>
     </div></section>
 <section class="timeline-section"><p class="section-title">Training timeline</p><div class="timeline">
-      <div class="week-node past">
+      <div class="week-node past" data-week="1">
         <div class="week-dates">Apr 13–19</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>55 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="2">
         <div class="week-dates">Apr 20–26</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>62 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="3">
         <div class="week-dates">Apr 27–3</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>70 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="4">
         <div class="week-dates">May 4–10</div>
         <div class="week-labels">Easy</div>
         <div class='week-duration'>50 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="5">
         <div class="week-dates">May 11–17</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>70 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="6">
         <div class="week-dates">May 18–24</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>78 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="7">
         <div class="week-dates">May 25–31</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>80 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="8">
         <div class="week-dates">Jun 1–7</div>
         <div class="week-labels">Easy</div>
         <div class='week-duration'>55 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="9">
         <div class="week-dates">Jun 8–14</div>
         <div class="week-labels">Tempo, Long</div>
         <div class='week-duration'>85 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="10">
         <div class="week-dates">Jun 15–21</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>85 min</div>
       </div>
-      <div class="week-node past">
+      <div class="week-node past" data-week="11">
         <div class="week-dates">Jun 22–28</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>95 min</div>
       </div>
-      <div class="week-node current">
+      <div class="week-node current" data-week="12">
         <div class="week-dates">Jun 29–5</div>
         <div class="week-labels">Easy</div>
         <div class='week-duration'>55 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="13">
         <div class="week-dates">Jul 6–12</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>80 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="14">
         <div class="week-dates">Jul 13–19</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>87 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="15">
         <div class="week-dates">Jul 20–26</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>85 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="16">
         <div class="week-dates">Jul 27–2</div>
         <div class="week-labels">Easy</div>
         <div class='week-duration'>55 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="17">
         <div class="week-dates">Aug 3–9</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>90 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="18">
         <div class="week-dates">Aug 10–16</div>
         <div class="week-labels">Easy, Long</div>
         <div class='week-duration'>75 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="19">
         <div class="week-dates">Aug 17–23</div>
         <div class="week-labels">Easy, Tempo</div>
         <div class='week-duration'>60 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="20">
         <div class="week-dates">Aug 24–30</div>
         <div class="week-labels">Easy</div>
         <div class='week-duration'>40 min</div>
       </div>
-      <div class="week-node future">
+      <div class="week-node future" data-week="21">
         <div class="week-dates">Aug 31–6</div>
         <div class="week-labels">Race</div>
         
@@ -328,5 +353,72 @@ body {
   <p class="footer-text">Updated every Monday &middot; July 4, 2026</p>
 </footer>
 
+
+<script>
+(function() {
+  var DATA = {"1":[{"date":"Wednesday, Apr 15","duration_min":20,"label":"Easy","detail":"20 min easy jog; if needed try run 3 min / walk 1 min and repeat","is_today":false},{"date":"Saturday, Apr 18","duration_min":35,"label":"Long","detail":"35 min easy walk/jog at conversational pace","is_today":false}],"2":[{"date":"Wednesday, Apr 22","duration_min":22,"label":"Easy","detail":"22 min easy","is_today":false},{"date":"Saturday, Apr 25","duration_min":40,"label":"Long","detail":"40 min easy + 2 strides (20 sec comfortably fast / 40 sec walk recovery)","is_today":false}],"3":[{"date":"Wednesday, Apr 29","duration_min":25,"label":"Easy","detail":"25 min easy","is_today":false},{"date":"Saturday, May 2","duration_min":45,"label":"Long","detail":"45 min easy + 4 strides","is_today":false}],"4":[{"date":"Wednesday, May 6","duration_min":20,"label":"Easy","detail":"20 min easy \u2014 cutback week","is_today":false},{"date":"Saturday, May 9","duration_min":30,"label":"Easy","detail":"30 min easy \u2014 cutback week","is_today":false}],"5":[{"date":"Wednesday, May 13","duration_min":25,"label":"Easy","detail":"25 min easy","is_today":false},{"date":"Saturday, May 16","duration_min":45,"label":"Tempo","detail":"10 min easy warmup | 15 min tempo (~11:00\u201311:30/mi) | 10 min easy cooldown + 4 strides","is_today":false}],"6":[{"date":"Wednesday, May 20","duration_min":28,"label":"Easy","detail":"28 min easy","is_today":false},{"date":"Saturday, May 23","duration_min":50,"label":"Long","detail":"50 min easy + 4 strides","is_today":false}],"7":[{"date":"Wednesday, May 27","duration_min":30,"label":"Easy","detail":"30 min easy","is_today":false},{"date":"Saturday, May 30","duration_min":50,"label":"Tempo","detail":"10 min easy | 20 min tempo (~11:00\u201311:30/mi) | 10 min easy + 4 strides","is_today":false}],"8":[{"date":"Wednesday, Jun 3","duration_min":20,"label":"Easy","detail":"20 min easy \u2014 cutback week","is_today":false},{"date":"Saturday, Jun 6","duration_min":35,"label":"Easy","detail":"35 min easy \u2014 cutback week","is_today":false}],"9":[{"date":"Wednesday, Jun 10","duration_min":30,"label":"Tempo","detail":"10 min easy | 5 min tempo | 2 min jog | 5 min tempo | cooldown","is_today":false},{"date":"Saturday, Jun 13","duration_min":55,"label":"Long","detail":"55 min easy + 4 strides","is_today":false}],"10":[{"date":"Wednesday, Jun 17","duration_min":30,"label":"Easy","detail":"30 min easy","is_today":false},{"date":"Saturday, Jun 20","duration_min":55,"label":"Tempo","detail":"10 min easy | 3 \u00d7 7 min tempo with 2 min jog recovery | 5 min easy","is_today":false}],"11":[{"date":"Wednesday, Jun 24","duration_min":32,"label":"Easy","detail":"32 min easy","is_today":false},{"date":"Saturday, Jun 27","duration_min":63,"label":"Long","detail":"60\u201365 min easy \u2014 longest run of the plan (~5 miles)","is_today":false}],"12":[{"date":"Wednesday, Jul 1","duration_min":20,"label":"Easy","detail":"20 min easy \u2014 cutback week","is_today":false},{"date":"Saturday, Jul 4","duration_min":35,"label":"Easy","detail":"35 min easy \u2014 cutback week","is_today":true}],"13":[{"date":"Wednesday, Jul 8","duration_min":30,"label":"Easy","detail":"30 min easy","is_today":false},{"date":"Saturday, Jul 11","duration_min":50,"label":"Tempo","detail":"10 min easy | 20 min at goal race pace (10:00\u201310:30/mi) | 10 min easy + 4 strides","is_today":false}],"14":[{"date":"Wednesday, Jul 15","duration_min":32,"label":"Easy","detail":"32 min easy + 4 strides","is_today":false},{"date":"Saturday, Jul 18","duration_min":55,"label":"Tempo","detail":"10 min easy | 25 min goal pace (10:00\u201310:30/mi) | 10 min easy + 4 strides","is_today":false}],"15":[{"date":"Wednesday, Jul 22","duration_min":30,"label":"Easy","detail":"30 min easy","is_today":false},{"date":"Saturday, Jul 25","duration_min":55,"label":"Tempo","detail":"10 min easy | 3 \u00d7 8 min tempo with 90 sec jog recovery | 5 min easy + 4 strides","is_today":false}],"16":[{"date":"Wednesday, Jul 29","duration_min":20,"label":"Easy","detail":"20 min easy \u2014 cutback week","is_today":false},{"date":"Saturday, Aug 1","duration_min":35,"label":"Easy","detail":"35 min easy + 4 strides \u2014 cutback week","is_today":false}],"17":[{"date":"Wednesday, Aug 5","duration_min":30,"label":"Easy","detail":"30 min easy + 4 strides","is_today":false},{"date":"Saturday, Aug 8","duration_min":60,"label":"Tempo","detail":"15 min easy | 20 min goal race pace (10:00\u201310:30/mi) | 15 min easy + 4 strides","is_today":false}],"18":[{"date":"Wednesday, Aug 12","duration_min":25,"label":"Easy","detail":"25 min easy","is_today":false},{"date":"Saturday, Aug 15","duration_min":50,"label":"Long","detail":"50 min easy + 4 strides \u2014 taper begins","is_today":false}],"19":[{"date":"Wednesday, Aug 19","duration_min":20,"label":"Easy","detail":"20 min easy + 4 strides","is_today":false},{"date":"Saturday, Aug 22","duration_min":40,"label":"Tempo","detail":"10 min easy | 10 min goal pace | 4 strides | 10 min easy","is_today":false}],"20":[{"date":"Wednesday, Aug 26","duration_min":15,"label":"Easy","detail":"15 min easy + 4 strides","is_today":false},{"date":"Saturday, Aug 29","duration_min":25,"label":"Easy","detail":"25 min easy shakeout","is_today":false}],"21":[{"date":"Saturday, Sep 5","duration_min":0,"label":"Race","detail":"Race day \u2014 Charlottesville Women's Four Miler! Trust your training.","is_today":false}]};
+  var currentWeek = 12;
+  var section = document.querySelector('.this-week');
+  var title = section.querySelector('.section-title');
+  var nodes = document.querySelectorAll('.week-node[data-week]');
+
+  function escapeHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function renderDetail(detail) {
+    var blocks = detail.split('|').map(function(b){return b.trim();});
+    if (blocks.length === 1) return '<p class="detail">' + escapeHtml(blocks[0]) + '</p>';
+    return '<ol class="detail-blocks">' + blocks.map(function(b){return '<li>'+escapeHtml(b)+'</li>';}).join('') + '</ol>';
+  }
+
+  function labelClass(label) {
+    return {Easy:'label-easy',Tempo:'label-tempo',Intervals:'label-intervals',Long:'label-long',Race:'label-race'}[label]||'label-easy';
+  }
+
+  function renderCards(week) {
+    var runs = DATA[week];
+    if (!runs || !runs.length) return '<p>No runs scheduled — rest up!</p>';
+    return runs.map(function(r){
+      var todayCls = r.is_today ? ' today' : '';
+      var dur = r.duration_min > 0 ? r.duration_min + ' min' : 'Race day';
+      return '<div class="run-card'+todayCls+'"><div class="run-header"><span class="run-day">'+r.date+'</span><span class="run-duration">'+dur+'</span><span class="label '+labelClass(r.label)+'">'+r.label+'</span></div>'+renderDetail(r.detail)+'</div>';
+    }).join('');
+  }
+
+  function showWeek(week) {
+    var label = week === currentWeek ? 'This week' : 'Week ' + week;
+    var back = week !== currentWeek ? ' <a href="#" class="back-link">back to this week</a>' : '';
+    title.innerHTML = label + back;
+    var cardsHtml = renderCards(week);
+    // Remove existing cards and back link handler
+    var existing = section.querySelectorAll('.run-card, p.detail, p:not(.section-title)');
+    existing.forEach(function(el){ el.remove(); });
+    title.insertAdjacentHTML('afterend', cardsHtml);
+
+    if (back) {
+      title.querySelector('.back-link').addEventListener('click', function(e){
+        e.preventDefault();
+        showWeek(currentWeek);
+        updateActive(currentWeek);
+      });
+    }
+  }
+
+  function updateActive(week) {
+    nodes.forEach(function(n){
+      n.classList.toggle('selected', n.getAttribute('data-week') == week);
+    });
+  }
+
+  nodes.forEach(function(node){
+    node.addEventListener('click', function(){
+      var w = parseInt(this.getAttribute('data-week'), 10);
+      showWeek(w);
+      updateActive(w);
+    });
+  });
+})();
+</script>
 </body>
 </html>

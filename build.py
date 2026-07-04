@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import csv
 import datetime
+import json
 import os
 import re
 
@@ -121,13 +122,101 @@ def render_timeline(runs, current_week, plan_start, race_date, total_weeks):
         duration_str = f"{total_min} min" if total_min > 0 else ""
 
         nodes.append(f"""
-      <div class="week-node {state}">
+      <div class="week-node {state}" data-week="{w}">
         <div class="week-dates">{date_range}</div>
         <div class="week-labels">{key_labels}</div>
         {"<div class='week-duration'>" + duration_str + "</div>" if duration_str else ""}
       </div>""")
 
     return f'<div class="timeline">{"".join(nodes)}</div>'
+
+def build_week_data(runs, plan_start, today):
+    """Build a JSON-serializable dict of all weeks' run cards for the JS layer."""
+    week_map = {}
+    for r in runs:
+        w = r["week"]
+        week_map.setdefault(w, [])
+        wstart = week_start_date(plan_start, w)
+        run_date = day_date(wstart, r["day"])
+        date_str = run_date.strftime("%A, %b %d").replace(" 0", " ") if os.name == "nt" else run_date.strftime("%A, %b %-d")
+        week_map[w].append({
+            "date": date_str,
+            "duration_min": r["duration_min"],
+            "label": r["label"],
+            "detail": r["detail"],
+            "is_today": run_date == today,
+        })
+    return week_map
+
+
+SCRIPT = """
+<script>
+(function() {
+  var DATA = __WEEK_DATA__;
+  var currentWeek = __CURRENT_WEEK__;
+  var section = document.querySelector('.this-week');
+  var title = section.querySelector('.section-title');
+  var nodes = document.querySelectorAll('.week-node[data-week]');
+
+  function escapeHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function renderDetail(detail) {
+    var blocks = detail.split('|').map(function(b){return b.trim();});
+    if (blocks.length === 1) return '<p class="detail">' + escapeHtml(blocks[0]) + '</p>';
+    return '<ol class="detail-blocks">' + blocks.map(function(b){return '<li>'+escapeHtml(b)+'</li>';}).join('') + '</ol>';
+  }
+
+  function labelClass(label) {
+    return {Easy:'label-easy',Tempo:'label-tempo',Intervals:'label-intervals',Long:'label-long',Race:'label-race'}[label]||'label-easy';
+  }
+
+  function renderCards(week) {
+    var runs = DATA[week];
+    if (!runs || !runs.length) return '<p>No runs scheduled — rest up!</p>';
+    return runs.map(function(r){
+      var todayCls = r.is_today ? ' today' : '';
+      var dur = r.duration_min > 0 ? r.duration_min + ' min' : 'Race day';
+      return '<div class="run-card'+todayCls+'"><div class="run-header"><span class="run-day">'+r.date+'</span><span class="run-duration">'+dur+'</span><span class="label '+labelClass(r.label)+'">'+r.label+'</span></div>'+renderDetail(r.detail)+'</div>';
+    }).join('');
+  }
+
+  function showWeek(week) {
+    var label = week === currentWeek ? 'This week' : 'Week ' + week;
+    var back = week !== currentWeek ? ' <a href="#" class="back-link">back to this week</a>' : '';
+    title.innerHTML = label + back;
+    var cardsHtml = renderCards(week);
+    // Remove existing cards and back link handler
+    var existing = section.querySelectorAll('.run-card, p.detail, p:not(.section-title)');
+    existing.forEach(function(el){ el.remove(); });
+    title.insertAdjacentHTML('afterend', cardsHtml);
+
+    if (back) {
+      title.querySelector('.back-link').addEventListener('click', function(e){
+        e.preventDefault();
+        showWeek(currentWeek);
+        updateActive(currentWeek);
+      });
+    }
+  }
+
+  function updateActive(week) {
+    nodes.forEach(function(n){
+      n.classList.toggle('selected', n.getAttribute('data-week') == week);
+    });
+  }
+
+  nodes.forEach(function(node){
+    node.addEventListener('click', function(){
+      var w = parseInt(this.getAttribute('data-week'), 10);
+      showWeek(w);
+      updateActive(w);
+    });
+  });
+})();
+</script>"""
+
 
 # ── full page ─────────────────────────────────────────────────────────────────
 
@@ -270,9 +359,20 @@ body {
   padding: 0.5rem 0.65rem;
   min-width: 80px;
   font-size: 0.78rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
 }
 .week-node.past {
   opacity: 0.4;
+}
+.week-node:hover {
+  border-color: #5B7E8C;
+  background: #F7FAFA;
+}
+.week-node.selected {
+  border-color: #5B7E8C;
+  border-width: 2px;
+  background: #F0F5F6;
 }
 .week-node.current {
   border-color: #5B7E8C;
@@ -301,6 +401,20 @@ body {
   color: #A3533A;
   font-size: 0.7rem;
   font-weight: 600;
+}
+
+/* ── back link ── */
+.back-link {
+  font-size: 0.75rem;
+  color: #5B7E8C;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.back-link:hover {
+  text-decoration: underline;
 }
 
 /* ── footer ── */
@@ -344,6 +458,11 @@ def render_page(config, runs, today):
     countdown_str = f"{days_left}" if days_left > 0 else "Race day!"
     countdown_label = "days to race" if days_left > 0 else ""
 
+    # Build interactive week data
+    week_data = build_week_data(runs, plan_start, today)
+    week_json = json.dumps(week_data, separators=(",", ":"))
+    script_html = SCRIPT.replace("__WEEK_DATA__", week_json).replace("__CURRENT_WEEK__", str(current_week))
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -372,6 +491,7 @@ def render_page(config, runs, today):
   <p class="footer-text">Updated every Monday &middot; {today.strftime("%B %-d, %Y") if os.name != "nt" else today.strftime("%B %d, %Y").replace(" 0", " ")}</p>
 </footer>
 
+{script_html}
 </body>
 </html>"""
 
