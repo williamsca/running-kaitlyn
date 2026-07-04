@@ -1,30 +1,42 @@
 week,day,duration_min,label,detail
-1,Tuesday,30,Easy,30 min easy @ conversational pace (12:30–13:00/mi) | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-1,Thursday,35,Tempo,10 min easy warmup | 15 min @ tempo (10:00/mi) | 10 min easy cooldown
-1,Saturday,40,Long,40 min easy @ conversational pace; focus on time on feet
-2,Tuesday,30,Easy,30 min easy | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-2,Thursday,35,Intervals,10 min warmup | 4 × (2 min @ hard effort / 90 sec easy jog) | 10 min cooldown
-2,Saturday,45,Long,45 min easy; stay relaxed and conversational
-3,Tuesday,30,Easy,30 min easy | 4 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
-3,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (10:00/mi) | 10 min cooldown
-3,Saturday,50,Long,50 min easy; focus on consistent effort and form
-4,Tuesday,25,Easy,25 min easy — recovery week | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-4,Thursday,25,Easy,25 min easy — recovery week | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-4,Saturday,38,Long,38 min easy — recovery week; keep it relaxed
-5,Tuesday,30,Easy,30 min easy | 5 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-5,Thursday,38,Intervals,10 min warmup | 5 × (2 min @ hard effort / 90 sec easy jog) | 10 min cooldown
-5,Saturday,50,Long,50 min easy; practice race morning routine
-6,Tuesday,30,Easy,30 min easy | 5 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
-6,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (9:45/mi) | 10 min cooldown
-6,Saturday,55,Long,55 min easy — peak long run; simulate race morning nutrition
-7,Tuesday,30,Easy,30 min easy | 5 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
-7,Thursday,38,Intervals,10 min warmup | 6 × (90 sec @ hard effort / 60 sec easy jog) | 10 min cooldown
-7,Saturday,50,Long,50 min easy; reinforce form and mental confidence
-8,Tuesday,25,Easy,25 min easy — taper begins | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-8,Thursday,35,Tempo,10 min warmup | 15 min @ tempo (9:45/mi) | 10 min cooldown
-8,Saturday,45,Long,45 min easy; taper week — enjoy the lighter load
-9,Tuesday,25,Easy,25 min easy | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
-9,Thursday,20,Easy,20 min easy | 4 × 30 sec race-pace strides @ 11:00/mi feel; walk back fully
-9,Saturday,30,Easy,30 min easy shakeout; stay loose and relaxed
-10,Thursday,20,Easy,20 min easy shakeout — short and relaxed; no strides
-10,Saturday,0,Race,Race day — Women's Four Miler! Trust your training and run your pace.
+1,Wednesday,20,Easy,20 min easy jog; if needed try run 3 min / walk 1 min and repeat
+1,Saturday,35,Long,35 min easy walk/jog at conversational pace
+2,Wednesday,22,Easy,22 min easy
+2,Saturday,40,Long,40 min easy + 2 strides (20 sec comfortably fast / 40 sec walk recovery)
+3,Wednesday,25,Easy,25 min easy
+3,Saturday,45,Long,45 min easy + 4 strides
+4,Wednesday,20,Easy,20 min easy — cutback week
+4,Saturday,30,Easy,30 min easy — cutback week
+5,Wednesday,25,Easy,25 min easy
+5,Saturday,45,Tempo,10 min easy warmup | 15 min tempo (~11:00–11:30/mi) | 10 min easy cooldown + 4 strides
+6,Wednesday,28,Easy,28 min easy
+6,Saturday,50,Long,50 min easy + 4 strides
+7,Wednesday,30,Easy,30 min easy
+7,Saturday,50,Tempo,10 min easy | 20 min tempo (~11:00–11:30/mi) | 10 min easy + 4 strides
+8,Wednesday,20,Easy,20 min easy — cutback week
+8,Saturday,35,Easy,35 min easy — cutback week
+9,Wednesday,30,Tempo,10 min easy | 5 min tempo | 2 min jog | 5 min tempo | cooldown
+9,Saturday,55,Long,55 min easy + 4 strides
+10,Wednesday,30,Easy,30 min easy
+10,Saturday,55,Tempo,10 min easy | 3 × 7 min tempo with 2 min jog recovery | 5 min easy
+11,Wednesday,32,Easy,32 min easy
+11,Saturday,63,Long,60–65 min easy — longest run of the plan (~5 miles)
+12,Wednesday,20,Easy,20 min easy — cutback week
+12,Saturday,35,Easy,35 min easy — cutback week
+13,Wednesday,30,Easy,30 min easy
+13,Saturday,50,Tempo,10 min easy | 20 min at goal race pace (10:00–10:30/mi) | 10 min easy + 4 strides
+14,Wednesday,32,Easy,32 min easy + 4 strides
+14,Saturday,55,Tempo,10 min easy | 25 min goal pace (10:00–10:30/mi) | 10 min easy + 4 strides
+15,Wednesday,30,Easy,30 min easy
+15,Saturday,55,Tempo,10 min easy | 3 × 8 min tempo with 90 sec jog recovery | 5 min easy + 4 strides
+16,Wednesday,20,Easy,20 min easy — cutback week
+16,Saturday,35,Easy,35 min easy + 4 strides — cutback week
+17,Wednesday,30,Easy,30 min easy + 4 strides
+17,Saturday,60,Tempo,15 min easy | 20 min goal race pace (10:00–10:30/mi) | 15 min easy + 4 strides
+18,Wednesday,25,Easy,25 min easy
+18,Saturday,50,Long,50 min easy + 4 strides — taper begins
+19,Wednesday,20,Easy,20 min easy + 4 strides
+19,Saturday,40,Tempo,10 min easy | 10 min goal pace | 4 strides | 10 min easy
+20,Wednesday,15,Easy,15 min easy + 4 strides
+20,Saturday,25,Easy,25 min easy shakeout
+21,Saturday,0,Race,Race day — Charlottesville Women's Four Miler! Trust your training.
