@@ -127,12 +127,7 @@ def render_timeline(runs, current_week, plan_start, race_date, total_weeks):
         {"<div class='week-duration'>" + duration_str + "</div>" if duration_str else ""}
       </div>""")
 
-    finish = """
-      <div class="week-node finish">
-        <div class="week-labels">Race Day</div>
-      </div>"""
-
-    return f'<div class="timeline">{"".join(nodes)}{finish}</div>'
+    return f'<div class="timeline">{"".join(nodes)}</div>'
 
 # ── full page ─────────────────────────────────────────────────────────────────
 

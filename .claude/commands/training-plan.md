@@ -19,6 +19,7 @@ Read `data/config.yaml` and use Claude to build a complete `data/plan.csv` that 
    - Taper for the final 1–2 weeks before race day.
    - Include a mix of run types: Easy, Tempo, Intervals, Long, and Race (race day only).
    - Each week should have 2–4 runs. Long runs go on Saturday. Easy/Tempo/Intervals go on Tuesday and/or Thursday.
+   - Append 4–6 × 20–30 sec strides (accelerate to ~90% effort, walk/jog back for full recovery) to most Easy runs throughout the plan, including recovery weeks and taper. Omit only on the day before a hard workout or the day before race day.
    - Race week: include one final shakeout Easy run mid-week if desired, then Race on the race's day of week.
    - `duration_min` should be 0 for the Race row.
    - `detail` should be a plain-English description of the workout. Use `|` to separate blocks within a single workout (e.g. warmup | main set | cooldown).

@@ -1,30 +1,30 @@
 week,day,duration_min,label,detail
-1,Tuesday,30,Easy,30 min @ easy conversational pace (11:00–11:30/mi)
-1,Thursday,35,Tempo,10 min warmup @ easy | 15 min @ tempo (9:45/mi) | 10 min cooldown
-1,Saturday,40,Long,40 min @ easy pace; focus on time on feet
-2,Tuesday,30,Easy,30 min @ easy conversational pace
-2,Thursday,35,Intervals,10 min warmup | 4×(2 min @ hard / 90 sec jog) | 10 min cooldown
-2,Saturday,45,Long,45 min @ easy pace; stay relaxed
-3,Tuesday,30,Easy,30 min easy with 4×20 sec strides at the end
-3,Thursday,35,Tempo,10 min warmup | 18 min @ tempo (9:45/mi) | 7 min cooldown
-3,Saturday,50,Long,50 min easy; focus on consistent effort
-4,Tuesday,25,Easy,25 min easy — recovery week
-4,Thursday,30,Easy,30 min easy with 4×20 sec strides
-4,Saturday,40,Long,40 min easy — recovery week; keep it relaxed
-5,Tuesday,30,Easy,30 min @ easy pace
-5,Thursday,35,Intervals,10 min warmup | 5×(2 min @ hard / 90 sec jog) | 10 min cooldown
+1,Tuesday,30,Easy,30 min easy @ conversational pace (12:30–13:00/mi) | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+1,Thursday,35,Tempo,10 min easy warmup | 15 min @ tempo (10:00/mi) | 10 min easy cooldown
+1,Saturday,40,Long,40 min easy @ conversational pace; focus on time on feet
+2,Tuesday,30,Easy,30 min easy | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+2,Thursday,35,Intervals,10 min warmup | 4 × (2 min @ hard effort / 90 sec easy jog) | 10 min cooldown
+2,Saturday,45,Long,45 min easy; stay relaxed and conversational
+3,Tuesday,30,Easy,30 min easy | 4 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
+3,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (10:00/mi) | 10 min cooldown
+3,Saturday,50,Long,50 min easy; focus on consistent effort and form
+4,Tuesday,25,Easy,25 min easy — recovery week | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+4,Thursday,25,Easy,25 min easy — recovery week | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+4,Saturday,38,Long,38 min easy — recovery week; keep it relaxed
+5,Tuesday,30,Easy,30 min easy | 5 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+5,Thursday,38,Intervals,10 min warmup | 5 × (2 min @ hard effort / 90 sec easy jog) | 10 min cooldown
 5,Saturday,50,Long,50 min easy; practice race morning routine
-6,Tuesday,30,Easy,30 min easy
-6,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (9:30/mi) | 10 min cooldown
-6,Saturday,55,Long,55 min easy; longest long run of the plan
-7,Tuesday,30,Easy,30 min easy with 4×20 sec strides
-7,Thursday,35,Intervals,10 min warmup | 6×(90 sec @ hard / 60 sec jog) | 10 min cooldown
-7,Saturday,50,Long,50 min easy; simulate race morning nutrition
-8,Tuesday,30,Easy,30 min easy
-8,Thursday,35,Tempo,10 min warmup | 15 min @ tempo (9:30/mi) | 10 min cooldown
-8,Saturday,45,Long,45 min easy — taper begins
-9,Tuesday,25,Easy,25 min easy
-9,Thursday,20,Easy,20 min easy with 4×30 sec race-pace strides (11:00/mi)
-9,Saturday,30,Easy,30 min shakeout — stay loose, feel fresh
-10,Thursday,20,Easy,20 min easy shakeout; short and relaxed
-10,Saturday,0,Race,Race day — Women's Four Miler! You've got this.
+6,Tuesday,30,Easy,30 min easy | 5 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
+6,Thursday,40,Tempo,10 min warmup | 20 min @ tempo (9:45/mi) | 10 min cooldown
+6,Saturday,55,Long,55 min easy — peak long run; simulate race morning nutrition
+7,Tuesday,30,Easy,30 min easy | 5 × 25 sec strides (accelerate to controlled fast effort; walk back fully)
+7,Thursday,38,Intervals,10 min warmup | 6 × (90 sec @ hard effort / 60 sec easy jog) | 10 min cooldown
+7,Saturday,50,Long,50 min easy; reinforce form and mental confidence
+8,Tuesday,25,Easy,25 min easy — taper begins | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+8,Thursday,35,Tempo,10 min warmup | 15 min @ tempo (9:45/mi) | 10 min cooldown
+8,Saturday,45,Long,45 min easy; taper week — enjoy the lighter load
+9,Tuesday,25,Easy,25 min easy | 4 × 20 sec strides (accelerate to controlled fast effort; walk back fully)
+9,Thursday,20,Easy,20 min easy | 4 × 30 sec race-pace strides @ 11:00/mi feel; walk back fully
+9,Saturday,30,Easy,30 min easy shakeout; stay loose and relaxed
+10,Thursday,20,Easy,20 min easy shakeout — short and relaxed; no strides
+10,Saturday,0,Race,Race day — Women's Four Miler! Trust your training and run your pace.
