@@ -122,7 +122,6 @@ def render_timeline(runs, current_week, plan_start, race_date, total_weeks):
 
         nodes.append(f"""
       <div class="week-node {state}">
-        <div class="week-number">Wk {w}</div>
         <div class="week-dates">{date_range}</div>
         <div class="week-labels">{key_labels}</div>
         {"<div class='week-duration'>" + duration_str + "</div>" if duration_str else ""}
@@ -130,7 +129,6 @@ def render_timeline(runs, current_week, plan_start, race_date, total_weeks):
 
     finish = """
       <div class="week-node finish">
-        <img src="../assets/finish.png" alt="Finish line" class="finish-img">
         <div class="week-labels">Race Day</div>
       </div>"""
 
@@ -190,12 +188,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.header-art {
-  width: 90px;
-  height: auto;
-  flex-shrink: 0;
-}
-
 /* ── section titles ── */
 .section-title {
   font-size: 0.75rem;
@@ -301,11 +293,6 @@ body {
   justify-content: center;
   gap: 0.25rem;
 }
-.week-number {
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: #2C3E2D;
-}
 .week-dates {
   color: #7A8F7D;
   font-size: 0.7rem;
@@ -320,22 +307,11 @@ body {
   font-size: 0.7rem;
   font-weight: 600;
 }
-.finish-img {
-  width: 52px;
-  height: auto;
-}
 
 /* ── footer ── */
 .site-footer {
   border-top: 1px solid #C2CABB;
   padding-top: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.footer-art {
-  width: 48px;
-  opacity: 0.6;
 }
 .footer-text {
   font-size: 0.78rem;
@@ -362,7 +338,7 @@ def render_page(config, runs, today):
             run_date = day_date(week_start, run["day"])
             is_today = (run_date == today)
             cards += render_run_card(run, run_date, is_today)
-        this_week_html = f'<section class="this-week"><p class="section-title">This week — Week {current_week}</p>{cards}</section>'
+        this_week_html = f'<section class="this-week"><p class="section-title">This week</p>{cards}</section>'
     else:
         this_week_html = f'<section class="this-week"><p class="section-title">This week</p><p>No runs scheduled — rest up!</p></section>'
 
@@ -392,14 +368,12 @@ def render_page(config, runs, today):
     <div class="countdown">{countdown_str}</div>
     {"<div class='countdown-label'>" + countdown_label + "</div>" if countdown_label else ""}
   </div>
-  <img src="../assets/runner.png" alt="" class="header-art" aria-hidden="true">
 </header>
 
 {this_week_html}
 {timeline_html}
 
 <footer class="site-footer">
-  <img src="../assets/bagels.png" alt="" class="footer-art" aria-hidden="true">
   <p class="footer-text">Updated every Monday &middot; {today.strftime("%B %-d, %Y") if os.name != "nt" else today.strftime("%B %d, %Y").replace(" 0", " ")}</p>
 </footer>
 
