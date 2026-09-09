@@ -1,8 +1,12 @@
-name: Weekly build
+name: Build training site
 
 on:
-  schedule:
-    - cron: '0 10 * * 1'  # Every Monday at 10:00 UTC (6:00 AM ET)
+  push:
+    paths:
+      - 'build.py'
+      - 'templates/**'
+      - 'data/**'
+      - '.github/workflows/build.yaml'
   workflow_dispatch:       # Allow manual trigger
 
 jobs:
@@ -21,5 +25,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/index.html
-          git diff --staged --quiet || git commit -m "Weekly build $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Build training site"
           git push

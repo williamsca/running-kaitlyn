@@ -1,0 +1,30 @@
+week,week_start,phase,easy_miles,quality_miles,quality_workout,long_miles,long_workout,race_miles,notes
+1,2026-09-07,Recovery,2,,,2.5,,,"Easy running only, rebuild after 4-Miler"
+2,2026-09-14,Recovery,2,,,3,,,
+3,2026-09-21,Recovery,2.5,,,3.5,,,Last easy week before building volume
+4,2026-09-28,Base Building,2.5,,,4,,,Begin gradual mileage build
+5,2026-10-05,Base Building,3,,,4.5,,,
+6,2026-10-12,Base Building,3,,,5,,,
+7,2026-10-19,Base Building,2.5,,,4,,,Cutback week
+8,2026-10-26,Base Building,3,2.5,"Strides x4, easy pace",5.5,,,3rd run day added
+9,2026-11-02,Base Building,3,3,"Strides x4, easy pace",6,,,
+10,2026-11-09,Base Building,3.5,3,Hill repeats x6 (short),6.5,,,
+11,2026-11-16,Base Building,3,2.5,Easy + strides,5,,,Cutback week
+12,2026-11-23,Base Building,3.5,3,Hill repeats x6-8,7,,,
+13,2026-11-30,Base Building,3.5,3,Tempo intervals: 3x8min @ tempo pace,7.5,,,Reintroduce tempo work carefully
+14,2026-12-07,Base Building,3.5,3.5,Tempo intervals: 3x10min @ tempo pace,7,,,
+15,2026-12-14,Base Building,3,2.5,Easy + strides,6,,,Cutback week — end of base phase
+16,2026-12-21,Build,3.5,3,Hill repeats x8,7.5,,,Begin build phase
+17,2026-12-28,Build,4,3.5,Tempo: 4x8min @ tempo pace,8,,,
+18,2027-01-04,Build,3,2.5,Easy + strides,6,,,Cutback week
+19,2027-01-11,Build,4,3.5,Tempo: 25min continuous @ tempo pace,8.5,,,
+20,2027-01-18,Build,4,3.5,Hill repeats x8-10,9,,,
+21,2027-01-25,Build,3,3,Easy + strides,7,,,Cutback week
+22,2027-02-01,Build,4,4,Tempo: 30min continuous @ tempo pace,9.5,,,Peak long run #1
+23,2027-02-08,Build,3.5,3,Easy + strides,8,,,Cutback week
+24,2027-02-15,Build,4,4,Race-pace intervals: 3x1mi @ goal pace,9.5,,,Peak long run #2
+25,2027-02-22,Build,3,3,Race-pace intervals: 2x1mi @ goal pace,7,,,Recovery before taper
+26,2027-03-01,Build,3.5,3,Easy running,8,Race-pace: 4mi @ goal pace within long run,,Last long run before taper
+27,2027-03-08,Taper,3,2,Easy + strides,6,,,Begin taper
+28,2027-03-15,Taper,2.5,2,Easy + short race-pace strides,4,,,
+29,2027-03-22,Race,2,,,,,10,Easy shakeout only

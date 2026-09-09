@@ -1,5 +1,10 @@
-race_name: "Women's Four Miler"
+race_name: "Charlottesville 10 Miler"
 race_location: "Charlottesville, VA"
-race_date: 2026-09-05
-plan_start_date: 2026-04-13
-goal_pace: "10:00-10:30"
+race_date: 2027-03-27
+plan_start_date: 2026-09-07
+plan_file: ten-miler-2027.csv
+plan_id: ten-miler-2027
+easy_pace: "13:00–14:00 /mi"
+tempo_pace: "12:10–12:30 /mi"
+long_pace: "12:30–13:30 /mi"
+goal_pace: "11:45–12:15 /mi"
